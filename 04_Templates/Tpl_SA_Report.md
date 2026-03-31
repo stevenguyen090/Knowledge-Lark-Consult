@@ -20,8 +20,9 @@ target: SA Report
 - Ranh giới giải pháp: Nhân viên dùng Lark Chat để trình duyệt -> Flow về Lark Base -> Data đẩy về Cấp quản lý phân tích ở Bitable Dashboard.
 
 ## 5. Schema Lark Base (Sơ đồ bảng dữ liệu)
+> ⚠️ **Bắt buộc tuân thủ:** [[Tpl_LarkBase_Convention]] khi đặt tên bảng, trường và chọn field type.
 > Tên Bảng: `tbl_Orders` - Purpose: Theo dõi đơn.
-> Fields: `Order_ID (Auto-Number)`, `San_pham (Single Select)`, `Gia_Tri (Currency)`, `Trang_Thai (Single Select)`. Views: Kanban theo trạng thái.
+> Fields: `order_id (AutoNumber)`, `san_pham (SingleSelect)`, `calc_gia_tri (Currency)`, `trang_thai (SingleSelect)`. Views: Kanban theo trạng thái.
 
 ## 6. Lên cấu trúc Automation & Approval
 > **Automation ID:** AUT-001 | **Trigger:** Trạng thái Order = Đã chuẩn bị | **Action:** Gắn thẻ tin nhắn (Tag) Bot báo Sales.

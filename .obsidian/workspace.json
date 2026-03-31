@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Business_Model/Mo_hinh_kinh_doanh.md",
+                "file": "04_Templates/Tpl_LarkBase_Convention.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mo_hinh_kinh_doanh"
+              "title": "Tpl_LarkBase_Convention"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Business_Model/Mo_hinh_kinh_doanh.md",
+                "file": "04_Templates/Tpl_LarkBase_Convention.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Mo_hinh_kinh_doanh"
+              "title": "Backlinks for Tpl_LarkBase_Convention"
             }
           },
           {
@@ -187,9 +187,10 @@
   },
   "active": "c82367c5d92c939e",
   "lastOpenFiles": [
+    "01_Business_Model/Mo_hinh_kinh_doanh.md",
+    "04_Templates/Tpl_LarkBase_Convention.md",
     "README.md",
     "01_Business_Model/Tam_nhin_va_Su_menh.md",
-    "01_Business_Model/Mo_hinh_kinh_doanh.md",
     "High level consulting process canvas.canvas",
     "2026-03-28.md",
     "02_Consulting_Process/03_Thiet_ke_UML.md",

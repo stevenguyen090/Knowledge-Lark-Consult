@@ -37,19 +37,27 @@ POS --> Lark : 2. Đồng bộ tổng doanh thu (API)
 
 ## Mẫu 2: ERD Tự Động Xóa / Tự Động Build (Dành cho Auto-Build Bot)
 Chuẩn xác Type để công cụ Lark MCP đọc hiểu.
+> ⚠️ **Bắt buộc tuân thủ:** [[Tpl_LarkBase_Convention]] — Đối chiếu checklist trước khi chuyển ERD sang Phase 5.
 \`\`\`plantuml
 @startuml
-entity "tbl_KhaoSat" as P_KhaoSat {
-  * KhaoSat_ID (Text)
+entity "tbl_KhaoSats" as P_KhaoSat {
+  * khaosat_id (AutoNumber)
   --
-  Loai_KH (Single Select)
-  Lien_he (Person)
+  loai_kh (SingleSelect)
+  lien_he (Person)
+  trang_thai (SingleSelect)
+  dt_created (CreatedTime)
+  dt_modified (ModifiedTime)
+  nguoi_tao (Person)
 }
-entity "tbl_DanhGia" as P_DanhGia {
-  * DanhGia_ID (Text)
+entity "tbl_DanhGias" as P_DanhGia {
+  * danhgia_id (AutoNumber)
   --
-  Link_To_Khao_Sat (Link)
-  DiemRating (Number)
+  fk_khaosat_id (DuplexLink)
+  diem_rating (Number)
+  trang_thai (SingleSelect)
+  dt_created (CreatedTime)
+  dt_modified (ModifiedTime)
 }
 P_KhaoSat "1" -- "N" P_DanhGia
 @enduml

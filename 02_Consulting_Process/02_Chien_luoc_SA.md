@@ -16,7 +16,7 @@ phase: 2
 2. **Định vị Lark:** Xác định rõ Lark đóng vai trò gì. (Ví dụ: Collaboration Hub, Workflow Engine, Operational Layer...). Lưu ý: Lark KHÔNG BAO GIỜ là ERP/CRM sinh ra dữ liệu gốc (nếu DN đã có Core system).
 3. **Chiến lược Tích hợp:** Lên chiến lược `Keep` (Giữ lại), `Integrate` (Tích hợp API/AnyCross), hay `Replace` (Thay thế bằng Base) đối với các phần mềm cũ của khách.
 4. **High-level Architecture:** Vẽ ranh giới phân định hệ thống. Liệt kê các Module Lark lõi sẽ dùng.
-5. **Data Schema (Lark Base):** Hệ thống hóa cấu trúc Bảng và Trường dữ liệu. Áp dụng quy tắc bắt buộc: Auto-Number, Status, Audit Fields, Formula cho field tính toán. Không nên lập bảng >15 field cho Phase 1.
+5. **Data Schema (Lark Base):** Hệ thống hóa cấu trúc Bảng và Trường dữ liệu. **Bắt buộc tuân thủ [[Tpl_LarkBase_Convention]]** — Áp dụng đúng tiền tố (`tbl_`, `fk_`, `calc_`...), Mandatory Fields (ID, trạng thái, audit), Field Type Mapping chuẩn. Không nên lập bảng >15 field cho Phase 1.
 6. **Automation & Approval:** Thiết kế Triggers, Actions và luồng duyệt Approval Workflow nhiều cấp.
 7. **Detailed Process:** Map giải pháp chi tiết vào từng quy trình cốt lõi (Ai làm gì trên Lark, tự động gửi bot báo thế nào).
 8. **Data Ownership:** Xác định nguyên tắc "Single Source of Truth" duy nhất cho mỗi thực thể dữ liệu.
@@ -31,3 +31,4 @@ phase: 2
 
 ## Các Template liên quan
 - Mẫu Kiến trúc Giải pháp: [[Tpl_SA_Report]]
+- Quy ước đặt tên Lark Base: [[Tpl_LarkBase_Convention]]

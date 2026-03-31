@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"87a10e9d6c4babb8","type":"file","file":"02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md","x":560,"y":-720,"width":400,"height":400},
+		{"id":"6f1440e4f2df1e23","type":"file","file":"02_Consulting_Process/02_Chien_luoc_SA.md","x":1160,"y":-400,"width":400,"height":400},
+		{"id":"88a8ea63852f7725","type":"file","file":"02_Consulting_Process/Tong_quan_quy_trinh.md","x":0,"y":-1080,"width":400,"height":440,"color":"6"},
+		{"id":"d3adb827f2692749","type":"file","file":"02_Consulting_Process/03_Thiet_ke_UML.md","x":1760,"y":-120,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"7b56fcd2c079c630","fromNode":"88a8ea63852f7725","fromSide":"right","toNode":"87a10e9d6c4babb8","toSide":"left"},
+		{"id":"aa27e1cb14405b20","fromNode":"87a10e9d6c4babb8","fromSide":"right","toNode":"6f1440e4f2df1e23","toSide":"left"},
+		{"id":"cdc8338bb1f954f9","fromNode":"6f1440e4f2df1e23","fromSide":"right","toNode":"d3adb827f2692749","toSide":"left"}
+	]
+}

@@ -169,7 +169,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,7 +185,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "e679e2894e6e4303",
+  "active": "c82367c5d92c939e",
   "lastOpenFiles": [
     "01_Business_Model/Tam_nhin_va_Su_menh.md",
     "01_Business_Model/Mo_hinh_kinh_doanh.md",

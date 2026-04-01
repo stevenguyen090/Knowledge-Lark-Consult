@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Templates/Tpl_LarkBase_Convention.md",
+                "file": "02_Consulting_Process/03_Thiet_ke_UML.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tpl_LarkBase_Convention"
+              "title": "03_Thiet_ke_UML"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_Templates/Tpl_LarkBase_Convention.md",
+                "file": "02_Consulting_Process/03_Thiet_ke_UML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Tpl_LarkBase_Convention"
+              "title": "Backlinks for 03_Thiet_ke_UML"
             }
           },
           {
@@ -187,8 +187,9 @@
   },
   "active": "c82367c5d92c939e",
   "lastOpenFiles": [
-    "01_Business_Model/Mo_hinh_kinh_doanh.md",
     "04_Templates/Tpl_LarkBase_Convention.md",
+    "02_Consulting_Process/Tong_quan_quy_trinh.md",
+    "01_Business_Model/Mo_hinh_kinh_doanh.md",
     "README.md",
     "01_Business_Model/Tam_nhin_va_Su_menh.md",
     "High level consulting process canvas.canvas",
@@ -199,7 +200,6 @@
     "Untitled.canvas",
     "Untitled.base",
     "Untitled 2.canvas",
-    "02_Consulting_Process/Tong_quan_quy_trinh.md",
     "Diagram/Lark AI Agent in Lark workflow.md",
     "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
     "00_MOC/00.00_Home.md",

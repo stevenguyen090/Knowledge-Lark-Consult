@@ -35,8 +35,8 @@ phase: 3 & 5
 Kỹ sư dùng sơ đồ ERD từ Giai đoạn 3 làm Input cho công cụ Auto-Build (`lark-mcp`). Các yêu cầu cho ERD (**xem chi tiết tại [[Tpl_LarkBase_Convention]]**):
 - Chú thích loại trường theo ký hiệu chuẩn: `(Text)`, `(SingleSelect)`, `(DuplexLink)`, `(Person)`...
 - Xác định rõ quan hệ `1:1`, `1:N`, `N:N` để bot Lark hiểu và thiết lập `multiple: true/false` trong Base.
-- Primary Key (Trường đầu tiên) bắt buộc — đặt theo `<entity>_id`.
-- Đủ 5 Mandatory Fields: ID, trang_thai, dt_created, dt_modified, nguoi_tao.
+- Primary Key (Trường đầu tiên) bắt buộc — đặt theo `Mã <Đối tượng>`.
+- Đủ 5 trường bắt buộc: Mã, Trạng thái, Ngày tạo, Người tạo, Ngày cập nhật.
 
 ## Tiêu chuẩn đầu ra (Input / Output)
 - **Input:** SA Report & Handoff Notes.

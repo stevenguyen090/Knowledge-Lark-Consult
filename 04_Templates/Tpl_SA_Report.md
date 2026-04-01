@@ -21,8 +21,8 @@ target: SA Report
 
 ## 5. Schema Lark Base (Sơ đồ bảng dữ liệu)
 > ⚠️ **Bắt buộc tuân thủ:** [[Tpl_LarkBase_Convention]] khi đặt tên bảng, trường và chọn field type.
-> Tên Bảng: `tbl_Orders` - Purpose: Theo dõi đơn.
-> Fields: `order_id (AutoNumber)`, `san_pham (SingleSelect)`, `calc_gia_tri (Currency)`, `trang_thai (SingleSelect)`. Views: Kanban theo trạng thái.
+> Tên Bảng: `Đơn hàng` - Purpose: Theo dõi đơn.
+> Fields: `Mã đơn hàng (AutoNumber)`, `Sản phẩm (SingleSelect)`, `Thành tiền (Currency)`, `Trạng thái (SingleSelect)`. Views: Kanban theo trạng thái.
 
 ## 6. Lên cấu trúc Automation & Approval
 > **Automation ID:** AUT-001 | **Trigger:** Trạng thái Order = Đã chuẩn bị | **Action:** Gắn thẻ tin nhắn (Tag) Bot báo Sales.

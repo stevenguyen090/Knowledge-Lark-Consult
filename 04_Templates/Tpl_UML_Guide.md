@@ -40,24 +40,22 @@ Chuẩn xác Type để công cụ Lark MCP đọc hiểu.
 > ⚠️ **Bắt buộc tuân thủ:** [[Tpl_LarkBase_Convention]] — Đối chiếu checklist trước khi chuyển ERD sang Phase 5.
 \`\`\`plantuml
 @startuml
-entity "tbl_KhaoSats" as P_KhaoSat {
-  * khaosat_id (AutoNumber)
+entity "Khảo sát" as P_KhaoSat {
+  * Mã khảo sát (AutoNumber)
   --
-  loai_kh (SingleSelect)
-  lien_he (Person)
-  trang_thai (SingleSelect)
-  dt_created (CreatedTime)
-  dt_modified (ModifiedTime)
-  nguoi_tao (Person)
+  Loại khách hàng (SingleSelect)
+  Liên hệ (Person)
+  Trạng thái (SingleSelect)
+  Ngày tạo (CreatedTime)
+  Người tạo (Person)
 }
-entity "tbl_DanhGias" as P_DanhGia {
-  * danhgia_id (AutoNumber)
+entity "Đánh giá" as P_DanhGia {
+  * Mã đánh giá (AutoNumber)
   --
-  fk_khaosat_id (DuplexLink)
-  diem_rating (Number)
-  trang_thai (SingleSelect)
-  dt_created (CreatedTime)
-  dt_modified (ModifiedTime)
+  Khảo sát (DuplexLink)
+  Điểm số (Number)
+  Trạng thái (SingleSelect)
+  Ngày tạo (CreatedTime)
 }
 P_KhaoSat "1" -- "N" P_DanhGia
 @enduml

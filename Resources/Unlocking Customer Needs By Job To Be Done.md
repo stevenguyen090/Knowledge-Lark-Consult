@@ -112,35 +112,3 @@ Và phần giới thiệu về việc khai phá nhu cầu bằng Job To Be Done 
 ### Thông tin thêm về mình:
 
 Mình có một thời gian trải nghiệm làm tại các công ty như Onpoint, VnExpress, KAS, Zalo. Mình cũng hiện là Trainer và quản lý chất lượng khối Product Manager của 1 trung tâm đào tạo công nghệ lớn tại Việt Nam. Đồng thời mình cũng đang là một trong những người tiên phong tư vấn ứng dụng bài bản Job To Be Done cho các Bank và công ty công nghệ tại Việt Nam. Một số mình tư vấn đã ứng dụng như Momo, Chợ Tốt, BIDV, Vua Nệm… và một số công ty Startup AI khác. Background của mình thật ra không dính tí gì tới Product cả:v Mình học Quantitative Finance rồi lên Master mình học Applied Economic and Data Science của chương trình Erasmus University Rotterdam với UEH. Mình có một bài viết liên quan về “Hấp thụ công nghệ và bằng chứng về Hội Tụ Câu Lạc Bộ” tại hội nghị Kinh Tế Châu Á, được đăng trên tạp chí khoa học JABES. Mình thấy khá hứng thú về hấp thụ công nghệ nên từ đấy mình chuyển sang làm công nghệ và Product luôn là thế. Mình là dân dữ liệu và định lượng nhưng mình lại có niềm đam với việc tìm hiểm các nhu cầu của khách hàng.
-
-Mình có 2 công ty: 1 công ty về Education, 1 công ty về cửa hàng đồ ăn. Bạn nào ở HCM có thể qua ăn ủng hộ:D
-
-[Địa Chỉ Quán Mình](https://www.facebook.com/profile.php?id=100092287381667)
-
-### Cộng Đồng Job To Be Done:
-
-[Link Tải Giáo Án Product](https://www.coderschool.vn/vi/product-management?utm_source=Influencer&utm_content=email_long_011024)
-
-[Group Facebook](https://www.facebook.com/groups/230645833231955/)
-
-[Group Zalo](https://zalo.me/g/ufgtgu684)
-
-[Web Job To Be Done Viet Nam](http://jobtobedonevietnam.com/)
-
-[Kênh Youtube](https://www.youtube.com/@JobToBeDoneVietnam)
-
-[Fanpage Facebook](https://www.facebook.com/profile.php?id=61558930451029)
-
-*Các kênh và group có tên “Job To Be Done Viet Nam” hoặc Job To Be Done VN” hầu như là của mình nên mọi người search là ra.*
-
-### Linkedin của mình:
-
-[Linkedin của Long](https://www.linkedin.com/in/ton-duc-thang-long-9bb4081a4/)
-
-Đăng ký để đọc nhiều bài viết hay hơn!!!
-
-Share cho anh em bạn bè cùng đọc nào
-
-Hãy để lại bình luận và cảm nghĩ của bạn
-
-15 Likes

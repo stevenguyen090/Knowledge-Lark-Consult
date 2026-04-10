@@ -44,6 +44,29 @@ target: SA Report
 - **Phase 2 (Tuần 4-5):** Gắn Automation gửi Messenger, Dashboard báo cáo sếp.
 - **Phase 3 (Tuần 6+):** AnyCross nối với tool ngoài.
 
-## 11. Các Ràng buộc & Câu hỏi Mở
-## 12. Handoff Notes cho UML Engineer
+## 11. AppScript / WebJob Strategy
+> Điền nếu giải pháp cần xử lý ngoài Lark native (realtime nặng, logic phức tạp, batch job).
+
+| Tình huống | Cơ chế đề xuất | Interval / Trigger | Ghi chú |
+|---|---|---|---|
+| [Mô tả tình huống] | AppScript / Python WebJob | Mỗi X phút / Event-driven | [Lưu ý logging, credentials] |
+
+## 12. API Catalog & Integration Spec
+> Điền nếu có tích hợp hệ thống ngoài. Bỏ trống nếu giải pháp thuần Lark.
+
+| # | Endpoint / Event | Phương thức | Mục đích | Auth | Webhook? | Event | Retry? | Miss Event? |
+|---|---|---|---|---|---|---|---|---|
+| 1 | | GET/POST/WH | | API Key / OAuth2 | ❌/✅ | | ❌/✅ | ❌/⚠️ |
+
+**Checklist tích hợp:**
+- [ ] Xác nhận Auth mechanism (API Key / OAuth2 / HMAC)
+- [ ] Token TTL & refresh flow
+- [ ] Danh sách Webhook events khả dụng
+- [ ] Cơ chế retry khi call thất bại
+- [ ] Chiến lược bù miss event (polling API)
+- [ ] Rate limit & Sandbox/Test environment
+
+## 13. Các Ràng buộc & Câu hỏi Mở
+
+## 14. Handoff Notes cho UML Engineer
 - "Draw 1 Sequence diagram for the Approval workflow. Export ERD base with PlantUML using Text/Link formats for Phase 5 to run Lark Auto-build."

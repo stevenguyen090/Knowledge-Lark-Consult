@@ -56,8 +56,10 @@ if (Phê duyệt Giải pháp & ERD?) then (Duyệt)
     :Chạy Auto-Build từ sơ đồ ERD;
     :Cấu hình Approval & Tích hợp (AnyCross);
   end merge
-  
-  :Bàn giao, Đào tạo & Nghiệm thu;
+
+  |Consultant / SA|
+  :Xây dựng Tài liệu Hướng dẫn End-User;
+  :Training & Bàn giao chính thức;
   stop
 else (Chưa duyệt)
   |Solution Architect (SA)|
@@ -102,4 +104,11 @@ endif
 - **Actor:** Lark Solution Architect & Bot Auto-Build (Lark MCP)
 - **Mô tả cụ thể:** Kích hoạt tính năng Auto-build. Hệ thống tự động đọc sơ đồ ERD đã duyệt để tạo lập tự động các bảng Lark Base, Workflow Approval. Triển khai cấu trúc Data Base chuẩn xác ngay từ giây đầu tiên.
 - **Input đầu vào:** Sơ đồ ERD (PlantUML) đã được duyệt.
-- **Output:** Ứng dụng Lark Base hoàn chỉnh, Automation chạy mượt mà, bàn giao tận tay khách hàng.
+- **Output:** Ứng dụng Lark Base hoàn chỉnh, Automation chạy mượt mà.
+
+### Giai đoạn 6: Tài liệu Hướng dẫn End-User (User Documentation)
+- **Actor:** Consultant / SA
+- **Mô tả cụ thể:** Viết tài liệu hướng dẫn theo từng vai trò (role-based) để mỗi actor tham gia quy trình biết chính xác mình cần làm gì trên hệ thống. Bao gồm hướng dẫn từng bước, lưu ý quan trọng, và xử lý lỗi thường gặp.
+- **Quy trình chi tiết:** Xem tại 👉 [[06_User_Documentation]]
+- **Input đầu vào:** Hệ thống Build hoàn chỉnh, danh sách Actor từ BA Report.
+- **Output (Gate 6):** Ít nhất 1 file hướng dẫn cho mỗi actor chính. Lưu vào `06_User_Guide/` trong hồ sơ khách hàng. Thực hiện training trước go-live.

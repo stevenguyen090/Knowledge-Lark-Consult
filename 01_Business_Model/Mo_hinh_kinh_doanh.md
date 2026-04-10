@@ -88,7 +88,7 @@ Lark Consult xây đủ **2 tầng** (điều đối thủ không làm):
 **Kênh chính (Inbound):**
 - **Website + 24 Case Studies:** Phân loại theo ngành × quy mô × vấn đề — khách tự nhận ra mình trong câu chuyện. Kênh chuyển đổi chính.
 - **LinkedIn B2B Storytelling:** Posts dạng 6-act narrative từ case studies. Kể chuyện vận hành, không quảng cáo tính năng.
-- **Zalo (0905.652.628):** Phản hồi trong 30 phút.
+- **Zalo:** Phản hồi trong 30 phút.
 
 **Kênh chuyển đổi:**
 - Form đặt lịch tư vấn 60 phút miễn phí (qua Lark Base Form) — entry point chính.

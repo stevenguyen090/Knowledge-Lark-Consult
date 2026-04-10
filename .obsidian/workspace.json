@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
+                "file": "04_Templates/Tpl_BA_Report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "F&B_Xep_ca"
+              "title": "Tpl_BA_Report"
             }
           }
         ]
@@ -187,6 +187,16 @@
   },
   "active": "c82367c5d92c939e",
   "lastOpenFiles": [
+    "04_Templates/Tpl_LarkBase_Convention.md",
+    "04_Templates/Tpl_BA_Report.md",
+    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
+    "02_Consulting_Process/02_Chien_luoc_SA.md",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
+    "00_MOC/00.02_MOC_Usecases.md",
+    "00_MOC/00.01_MOC_Business.md",
+    "00_MOC/00.00_Home.md",
+    "README.md",
     "04_Templates/Tpl_UML_Guide.md",
     "Diagram/Lark AI Agent in Lark workflow.md",
     "04_Templates/Tpl_Thong_tin_Khach.md",
@@ -194,28 +204,18 @@
     "High level consulting process canvas.canvas",
     "High level consulting process canvas 1.canvas",
     "Resources/Unlocking Customer Needs By Job To Be Done.md",
-    "00_MOC/00.00_Home.md",
-    "00_MOC/00.02_MOC_Usecases.md",
-    "00_MOC/00.01_MOC_Business.md",
     "04_Templates/Tpl_SA_Report.md",
-    "04_Templates/Tpl_LarkBase_Convention.md",
-    "04_Templates/Tpl_BA_Report.md",
     "02_Consulting_Process/03_Thiet_ke_UML.md",
     "Resources/How to Gain an Edge as a B2B PM.md",
     "How to Gain an Edge as a B2B PM.md",
     "Resources/Gemini API Key Free Limits 2026 What's Actually Free and Why Your Keys Share One Quota.md",
     "02_Consulting_Process/Tong_quan_quy_trinh.md",
     "01_Business_Model/Mo_hinh_kinh_doanh.md",
-    "README.md",
     "01_Business_Model/Tam_nhin_va_Su_menh.md",
     "2026-03-28.md",
-    "02_Consulting_Process/02_Chien_luoc_SA.md",
-    "03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
     "Untitled.canvas",
     "Untitled.base",
     "Untitled 2.canvas",
-    "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
-    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "04_Templates/Tpl_Usecase.md",
     "04_Templates",
     "03_Usecases_Lark_AI/Theo_Linh_vuc",

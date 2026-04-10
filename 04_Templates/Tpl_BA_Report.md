@@ -16,9 +16,9 @@ target: BA Report
 > Format: [Trigger] -> [Step 1: Actor làm gì/ra sao] -> ... -> [End State]
 
 ## 4. Các Bộ Phận Tham Gia (Roles & Responsibilities)
-| Role / Bộ phận | Người ra quyết định? | Người vận hành? | Chú thích |
-|---|---|---|---|
-| Admin | Yes | No | Quyền cao nhất |
+| Role / Bộ phận | Người ra quyết định? | Người vận hành? | Chú thích      | Mô tả vai trò, trách nhiệm                                                          |
+| -------------- | -------------------- | --------------- | -------------- | ----------------------------------------------------------------------------------- |
+| Admin          | Yes                  | No              | Quyền cao nhất | Xem bảng lương, tạo bảng lương, quản lý chấm công của nhân sự, đi lương cho nhân sự |
 
 ## 5. Công Cụ Hiện Tại (Current Systems & Tooling)
 | Phân loại | Công cụ đang dùng (Excel, Zalo...) | Rủi ro rò rỉ / Lỗi dữ liệu |

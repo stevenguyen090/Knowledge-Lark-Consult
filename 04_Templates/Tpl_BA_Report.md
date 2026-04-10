@@ -7,13 +7,23 @@ target: BA Report
 
 ## 1. Bối Cảnh (Business Context)
 - Cấu trúc doanh nghiệp (SME/Growth/Enterprise).
-- Tóm tắt chuỗi giá trị và cách kiếm tiền (Input -> Process -> Capture Revenue).
+- Tóm tắt chuỗi giá trị và cách kiếm tiền (Input → Process → Capture Revenue).
 
 ## 2. Kiến Thức Nghiệp Vụ (Domain Knowledge)
 - Các thuật ngữ ngành, quy định pháp lý, quy chế nội bộ đặc thù.
 
 ## 3. Quy Trình Chi Tiết (End-to-End Processes)
-> Format: [Trigger] -> [Step 1: Actor làm gì/ra sao] -> ... -> [End State]
+
+> Format: [Trigger] → [Step 1: Actor làm gì/ra sao] → ... → [End State]
+
+Với mỗi quy trình, bổ sung bảng dữ liệu actor thực hiện:
+
+**Tên quy trình:** [Tên]
+
+| Bước | Actor | Hành động | Thông tin nhập vào | Thông tin đầu ra | Công cụ hiện tại |
+|---|---|---|---|---|---|
+| 1 | [Vai trò] | [Làm gì] | [Điền gì, nhập gì] | [Tạo ra gì] | [Excel/Zalo/...] |
+| 2 | | | | | |
 
 ## 4. Các Bộ Phận Tham Gia (Roles & Responsibilities)
 | Role / Bộ phận | Người ra quyết định? | Người vận hành? | Chú thích      | Mô tả vai trò, trách nhiệm                                                          |

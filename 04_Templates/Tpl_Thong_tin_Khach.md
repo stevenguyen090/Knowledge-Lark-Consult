@@ -12,7 +12,7 @@ industry: [Điền ngành nghề]
 
 ## 2. Bài toán (AS-IS)
 - Quy trình hiện tại đang xử lý thủ công ở đâu?
-- Tính năng sếp mong đợi nhất?
+- Kỳ vọng của sếp/ quản lý về giải pháp?
 
 ## 3. Liên kết Usecase (TO-BE)
 (Sử dụng link nội bộ để ánh xạ về thư viện Usecase)

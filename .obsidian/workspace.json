@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Templates/Tpl_BA_Report.md",
+                "file": "04_Templates/Tpl_UML_Guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tpl_BA_Report"
+              "title": "Tpl_UML_Guide"
             }
           }
         ]
@@ -187,19 +187,20 @@
   },
   "active": "c82367c5d92c939e",
   "lastOpenFiles": [
-    "04_Templates/Tpl_LarkBase_Convention.md",
     "04_Templates/Tpl_BA_Report.md",
+    "04_Templates/Tpl_LarkBase_Convention.md",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
+    "04_Templates/Tpl_Usecase.md",
+    "04_Templates/Tpl_UML_Guide.md",
+    "04_Templates/Tpl_Thong_tin_Khach.md",
     "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "02_Consulting_Process/02_Chien_luoc_SA.md",
-    "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
     "03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
     "00_MOC/00.02_MOC_Usecases.md",
     "00_MOC/00.01_MOC_Business.md",
     "00_MOC/00.00_Home.md",
     "README.md",
-    "04_Templates/Tpl_UML_Guide.md",
     "Diagram/Lark AI Agent in Lark workflow.md",
-    "04_Templates/Tpl_Thong_tin_Khach.md",
     "Finance_Approval_Flow.md",
     "High level consulting process canvas.canvas",
     "High level consulting process canvas 1.canvas",
@@ -216,7 +217,6 @@
     "Untitled.canvas",
     "Untitled.base",
     "Untitled 2.canvas",
-    "04_Templates/Tpl_Usecase.md",
     "04_Templates",
     "03_Usecases_Lark_AI/Theo_Linh_vuc",
     "03_Usecases_Lark_AI",

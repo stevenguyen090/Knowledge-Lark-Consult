@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Business_Model/Mo_hinh_kinh_doanh.md",
+                "file": "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mo_hinh_kinh_doanh"
+              "title": "Fashion_Ads_Analytics"
             }
           }
         ]
@@ -187,11 +187,12 @@
   },
   "active": "c82367c5d92c939e",
   "lastOpenFiles": [
+    "01_Business_Model/Mo_hinh_kinh_doanh.md",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
     "02_Consulting_Process/06_User_Documentation.md",
     "05_Clients/README.md",
     "00_MOC/00.01_MOC_Business.md",
     "00_MOC/00.02_MOC_Usecases.md",
-    "01_Business_Model/Mo_hinh_kinh_doanh.md",
     "04_Templates/Tpl_Client_Project.md",
     "04_Templates/Tpl_LarkBase_Convention.md",
     "05_Clients/_SEONGON/01_Communication_Log.md",
@@ -216,7 +217,6 @@
     "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
     "03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
     "00_MOC/00.00_Home.md",
-    "Diagram/Lark AI Agent in Lark workflow.md",
     "High level consulting process canvas 1.canvas",
     "Untitled.canvas",
     "Untitled.base",

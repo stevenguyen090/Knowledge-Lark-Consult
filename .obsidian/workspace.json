@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "02_Chien_luoc_SA"
             }
+          },
+          {
+            "id": "51f1f199f3c92caf",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-04-11 21.05.21.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-04-11 21.05.21.excalidraw"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,8 +198,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "c82367c5d92c939e",
+  "active": "51f1f199f3c92caf",
   "lastOpenFiles": [
+    "02_Consulting_Process/02_Chien_luoc_SA.md",
+    "Excalidraw/Drawing 2026-04-11 21.05.21.excalidraw.md",
+    "Excalidraw",
     "02_Consulting_Process/03_Thiet_ke_UML.md",
     "05_Clients/_NgaFashion/06_User_Guide.md",
     "04_Templates/Tpl_User_Guide.md",
@@ -216,13 +232,10 @@
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON/01_Communication_Log.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON/00_Overview.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/README.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates/Tpl_User_Guide.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI/Theo_Linh_vuc",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/02_Consulting_Process",
     "High level consulting process canvas.canvas",
     "High level consulting process canvas 1.canvas",
     "Untitled.canvas",

@@ -1,0 +1,19 @@
+---
+type: Template
+target: Usecase
+---
+# Usecase: [Tên Năng Lực / Ngành]
+
+## 1. Nỗi đau của khách hàng (Pain point)
+- ...
+
+## 2. Giải quyết bằng (Lark & AI)
+- **Lark Base:** ...
+- **Lark Messenger / Approval:** ...
+- **AI Integration:** ...
+
+## 3. Lợi ích cho Người Lãnh Đạo (Sếp nhàn hơn thế nào)
+- ...
+
+## 4. Tài liệu tham khảo (Demo / ERD)
+- ...

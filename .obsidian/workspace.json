@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05_Clients/_NgaFashion/04_UML_Design.md",
+                "file": "05_Clients/_NgaFashion/03_SA_Report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04_UML_Design"
+              "title": "03_SA_Report"
             }
           }
         ],
@@ -202,9 +202,10 @@
   },
   "active": "51f1f199f3c92caf",
   "lastOpenFiles": [
-    "05_Clients/_NgaFashion/06_User_Guide.md",
-    "05_Clients/_NgaFashion/04_UML_Design.md",
+    "04_Templates/Tpl_SA_Report.md",
     "05_Clients/_NgaFashion/03_SA_Report.md",
+    "05_Clients/_NgaFashion/04_UML_Design.md",
+    "05_Clients/_NgaFashion/06_User_Guide.md",
     "05_Clients/_NgaFashion/05_References.md",
     "05_Clients/_NgaFashion/02_BA_Report.md",
     "02_Consulting_Process/02_Chien_luoc_SA.md",
@@ -232,7 +233,6 @@
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/README.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/Diagram/Lark AI Agent in Lark workflow.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/Diagram",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON/06_User_Guide.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates",

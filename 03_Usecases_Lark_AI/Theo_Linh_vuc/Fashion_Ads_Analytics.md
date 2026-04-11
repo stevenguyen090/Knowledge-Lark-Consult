@@ -140,11 +140,11 @@ Usecase này dành cho **doanh nghiệp thời trang mới mở**, đội ngũ g
 
 ### 5. API Catalog
 
-| # | Endpoint | Method | Mục đích | Auth | Webhook? | Event | Retry? | Miss Event? |
-|---|---|---|---|---|---|---|---|---|
-| 1 | `graph.facebook.com/v18.0/{act_id}/insights` | GET | Kéo số liệu campaign Meta | Bearer Token (Access Token) | ❌ | — | ✅ | Gọi lại polling sáng hôm sau |
-| 2 | `pancake.vn/api/v1/orders` | GET | Lấy danh sách đơn | API Key | ✅ | `order.completed` | ✅ | ✅ Có API polling bù |
-| 3 | `lark.larksuite.com/open-apis/...` | POST | Ghi record vào Base / Gửi bot message | OAuth2 App Token | — | — | ✅ | — |
+| #   | Endpoint                                     | Method | Mục đích                              | Auth                        | Webhook? | Event             | Retry? | Miss Event?                  |
+| --- | -------------------------------------------- | ------ | ------------------------------------- | --------------------------- | -------- | ----------------- | ------ | ---------------------------- |
+| 1   | `graph.facebook.com/v18.0/{act_id}/insights` | GET    | Kéo số liệu campaign Meta             | Bearer Token (Access Token) | ❌        | —                 | ✅      | Gọi lại polling sáng hôm sau |
+| 2   | `pancake.vn/api/v1/orders`                   | GET    | Lấy danh sách đơn                     | API Key                     | ✅        | `order.completed` | ✅      | ✅ Có API polling bù          |
+| 3   | `lark.larksuite.com/open-apis/...`           | POST   | Ghi record vào Base / Gửi bot message | OAuth2 App Token            | —        | —                 | ✅      | —                            |
 
 **Checklist tích hợp đã xác nhận:**
 - [x] Meta: dùng Business Access Token — cần gia hạn 60 ngày, setup refresh tự động

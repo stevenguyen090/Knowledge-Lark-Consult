@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05_Clients/_SEONGON/06_User_Guide.md",
+                "file": "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06_User_Guide"
-            }
-          },
-          {
-            "id": "0901829433286f1a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Minh/Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "Fashion_Ads_Analytics"
             }
           }
         ]
@@ -201,6 +187,12 @@
   },
   "active": "9fc76bb8ac14a227",
   "lastOpenFiles": [
+    "05_Clients/_NgaFashion/06_User_Guide.md",
+    "05_Clients/_NgaFashion/05_References.md",
+    "05_Clients/_NgaFashion/00_Overview.md",
+    "05_Clients/_NgaFashion/01_Communication_Log.md",
+    "05_Clients/_NgaFashion",
+    "Minh/Welcome.md",
     "Welcome.md",
     "Minh/Test Obsidian.md",
     "Minh",
@@ -230,13 +222,7 @@
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI/Theo_Linh_vuc",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/02_Consulting_Process/Tong_quan_quy_trinh.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/02_Consulting_Process/06_User_Documentation.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/02_Consulting_Process/03_Thiet_ke_UML.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/02_Consulting_Process/02_Chien_luoc_SA.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/02_Consulting_Process",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/01_Business_Model",
     "High level consulting process canvas.canvas",
     "High level consulting process canvas 1.canvas",
     "Untitled.canvas",

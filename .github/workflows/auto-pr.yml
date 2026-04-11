@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "auto update notes"
-          branch: notes-sync
+          branch: auto-pr   # 🔥 bắt buộc đổi
           base: main
           title: "Auto sync notes"
           body: "Auto PR from Obsidian Git"

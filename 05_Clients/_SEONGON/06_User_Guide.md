@@ -209,7 +209,7 @@ stop
 
 ### [QT-02] Chốt Đơn Hàng + Gắn Tag Campaign trên Pancake
 
-**Mô tả:** Khi khách hàng chốt đơn qua inbox Pancake, Sale Team phải gắn tag Campaign đúng tên để hệ thống tự động tính ROAS chính xác. Đây là bước quan trọng nhất — nếu quên hoặc gắn sai, toàn bộ báo cáo attribution sẽ sai.
+**Mô tả:** Khi khách hàng chốt đơn qua inbox Pancake, Sale Team phải gắn tag Campaign đúng tên để hệ thống tự động tính ROAS chính xác. Đây là bước quan trọng nhất — nếu quên hoặc gắn sai, toàn bộ báo cáo attribution sẽ sai....
 
 **Actors tham gia:**
 - 🧑‍💼 `Sale Team` — Tư vấn, chốt đơn, gắn tag Campaign

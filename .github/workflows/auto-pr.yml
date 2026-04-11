@@ -3,7 +3,7 @@ name: Auto Create PR
 on:
   push:
     branches:
-      - notes-sync   # hoặc user-a, user-b
+      - notes-sync
 
 jobs:
   create-pull-request:
@@ -12,12 +12,20 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: notes-sync
+          fetch-depth: 0
+
+      - name: Make dummy change (test)
+        run: |
+          echo "update $(date)" >> test.txt
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "auto update notes"
+          branch: auto-pr
           base: main
           title: "Auto sync notes"
           body: "Auto PR from Obsidian Git"

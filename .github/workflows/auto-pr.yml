@@ -12,13 +12,20 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Make dummy change (test)
+        run: |
+          echo "update $(date)" >> test.txt
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "auto update notes"
-          branch: auto-pr   # 🔥 bắt buộc đổi
+          branch: auto-pr
           base: main
           title: "Auto sync notes"
           body: "Auto PR from Obsidian Git"

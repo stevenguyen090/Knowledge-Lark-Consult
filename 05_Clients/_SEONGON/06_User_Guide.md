@@ -309,12 +309,12 @@ stop
 
 #### Edge Cases & Xử lý — QT-02
 
-| Tình huống | Nguyên nhân | Cách xử lý |
-|---|---|---|
-| Quên không gắn tag khi chốt đơn | Sale team bỏ sót bước | Vào lại đơn trong Pancake → chỉnh sửa tag trước khi cuối ngày. Nếu quá hạn → báo consultant cập nhật tay trong Base |
-| Khách đến từ nhiều chiến dịch (đã xem nhiều bài) | Khách click nhiều bài quảng cáo khác nhau | Ưu tiên tag campaign **cuối cùng** khách nhắc đến hoặc bài đầu tiên thu hút |
-| Đơn hàng hoàn (refund) đã tính ROAS | Khách hủy sau khi đã ghi nhận | Báo consultant để cập nhật trạng thái đơn trong Base về "Hủy" — ROAS sẽ được điều chỉnh |
-| Pancake không gửi webhook (đơn không hiện trong Base) | Webhook bị gián đoạn | Kiểm tra trạng thái đơn: phải là "Hoàn thành", không phải "Đang xử lý". Báo consultant nếu vẫn thiếu |
+| Tình huống                                            | Nguyên nhân                               | Cách xử lý                                                                                                          |
+| ----------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Quên không gắn tag khi chốt đơn                       | Sale team bỏ sót bước                     | Vào lại đơn trong Pancake → chỉnh sửa tag trước khi cuối ngày. Nếu quá hạn → báo consultant cập nhật tay trong Base |
+| Khách đến từ nhiều chiến dịch (đã xem nhiều bài)      | Khách click nhiều bài quảng cáo khác nhau | Ưu tiên tag campaign **cuối cùng** khách nhắc đến hoặc bài đầu tiên thu hút                                         |
+| Đơn hàng hoàn (refund) đã tính ROAS                   | Khách hủy sau khi đã ghi nhận             | Báo consultant để cập nhật trạng thái đơn trong Base về "Hủy" — ROAS sẽ được điều chỉnh                             |
+| Pancake không gửi webhook (đơn không hiện trong Base) | Webhook bị gián đoạn                      | Kiểm tra trạng thái đơn: phải là "Hoàn thành", không phải "Đang xử lý". Báo consultant nếu vẫn thiếu                |
 
 ---
 

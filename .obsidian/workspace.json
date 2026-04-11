@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05_Clients/_NgaFashion/06_User_Guide.md",
+                "file": "02_Consulting_Process/02_Chien_luoc_SA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06_User_Guide"
+              "title": "02_Chien_luoc_SA"
             }
           }
         ]
@@ -187,14 +187,18 @@
   },
   "active": "c82367c5d92c939e",
   "lastOpenFiles": [
-    "05_Clients/_NgaFashion/04_UML_Design.md",
-    "05_Clients/_NgaFashion/05_References.md",
+    "02_Consulting_Process/03_Thiet_ke_UML.md",
+    "05_Clients/_NgaFashion/06_User_Guide.md",
+    "04_Templates/Tpl_User_Guide.md",
+    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
+    "05_Clients/_NgaFashion/00_Overview.md",
+    "01_Problem_Statement.md",
     "05_Clients/_NgaFashion/03_SA_Report.md",
     "05_Clients/_NgaFashion/02_BA_Report.md",
+    "05_Clients/_NgaFashion/04_UML_Design.md",
+    "05_Clients/_NgaFashion/05_References.md",
     "05_Clients/_NgaFashion/01_Communication_Log.md",
-    "05_Clients/_NgaFashion/00_Overview.md",
     "02_Consulting_Process/06_User_Documentation.md",
-    "05_Clients/_NgaFashion/06_User_Guide.md",
     "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
     "05_Clients/_SEONGON/06_User_Guide.md",
     "05_Clients/_NgaFashion",
@@ -215,10 +219,6 @@
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/README.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates/Tpl_User_Guide.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates/Tpl_Usecase.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates/Tpl_UML_Guide.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates/Tpl_Thong_tin_Khach.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates/Tpl_SA_Report.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI/Theo_Linh_vuc",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI",

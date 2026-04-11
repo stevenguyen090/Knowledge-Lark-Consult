@@ -25,12 +25,14 @@
             "id": "51f1f199f3c92caf",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2026-04-11 21.05.21.excalidraw.md"
+                "file": "02_Consulting_Process/02_Chien_luoc_SA.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-04-11 21.05.21.excalidraw"
+              "icon": "lucide-file",
+              "title": "02_Chien_luoc_SA"
             }
           }
         ],
@@ -200,13 +202,16 @@
   },
   "active": "51f1f199f3c92caf",
   "lastOpenFiles": [
+    "00_MOC/00.00_Home.md",
+    "00_MOC/00.01_MOC_Business.md",
+    "00_MOC/00.02_MOC_Usecases.md",
     "02_Consulting_Process/02_Chien_luoc_SA.md",
+    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "Excalidraw/Drawing 2026-04-11 21.05.21.excalidraw.md",
     "Excalidraw",
     "02_Consulting_Process/03_Thiet_ke_UML.md",
     "05_Clients/_NgaFashion/06_User_Guide.md",
     "04_Templates/Tpl_User_Guide.md",
-    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "05_Clients/_NgaFashion/00_Overview.md",
     "01_Problem_Statement.md",
     "05_Clients/_NgaFashion/03_SA_Report.md",
@@ -228,9 +233,6 @@
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/Diagram/Lark AI Agent in Lark workflow.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/Diagram",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON/06_User_Guide.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON/05_References.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON/01_Communication_Log.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON/00_Overview.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates",

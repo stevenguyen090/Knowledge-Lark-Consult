@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
+                "file": "05_Clients/_NgaFashion/06_User_Guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fashion_Ads_Analytics"
+              "title": "06_User_Guide"
             }
           }
         ]
@@ -187,6 +187,7 @@
   },
   "active": "c82367c5d92c939e",
   "lastOpenFiles": [
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
     "05_Clients/_SEONGON/06_User_Guide.md",
     "05_Clients/_NgaFashion/06_User_Guide.md",
     "05_Clients/_NgaFashion/05_References.md",
@@ -219,7 +220,6 @@
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates/Tpl_BA_Report.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/04_Templates",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI/Theo_Linh_vuc",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/03_Usecases_Lark_AI",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/02_Consulting_Process",

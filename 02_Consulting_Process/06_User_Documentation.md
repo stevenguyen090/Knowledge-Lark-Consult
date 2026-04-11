@@ -35,37 +35,63 @@ Lấy từ bảng Roles & Responsibilities trong BA Report:
 
 ### Bước 2: Viết hướng dẫn theo cấu trúc chuẩn
 
-> Mỗi file hướng dẫn tuân theo cấu trúc:
+> Từ phiên bản 1.1, mỗi client có **1 file User Guide duy nhất** (`06_User_Guide.md`) bao gồm tất cả roles. Dùng template [[Tpl_User_Guide]].
 
-```markdown
-# [Tên quy trình] — Hướng dẫn dành cho [Vai trò]
+**Cấu trúc chuẩn của `06_User_Guide.md`:**
 
-## Bạn cần làm gì?
-[1-2 câu mô tả ngắn gọn]
+| Section | Nội dung |
+|---|---|
+| **Phần 1: Giới thiệu** | Mục đích, đối tượng sử dụng, phạm vi |
+| **Phần 2: Tổng quan hệ thống** | Bảng công cụ Lark + sơ đồ luồng dữ liệu PlantUML |
+| **Phần 3: Quy trình chi tiết** | Mỗi quy trình gồm: Swimlane + Bảng form + Edge cases |
+| **Phần 4: Theo từng Role** | Từng usecase cụ thể của từng nhân sự (bước-bước) |
+| **Phần 5: FAQ** | Câu hỏi thường gặp |
+| **Phần 6: Liên hệ hỗ trợ** | Ai liên hệ khi gặp vấn đề gì |
 
-## Các bước thực hiện
-1. [Bước 1: Hành động cụ thể + nơi thực hiện]
-2. [Bước 2: ...]
+#### Chuẩn PlantUML Swimlane cho mỗi quy trình
 
-## Lưu ý quan trọng
-- [Cạm bẫy thường gặp]
-- [Điều KHÔNG được làm]
+Mỗi quy trình phải có **sơ đồ swimlane** thể hiện:
+- **Actors/Lanes:** Mỗi role là 1 lane riêng (`|Role Name|`)
+- **Các bước thực hiện** theo thứ tự
+- **Rẽ nhánh `if/else`** cho mọi edge case và điều kiện trong quy trình
+- **Tự động hóa (`Lark System / Bot`)** là 1 lane riêng
 
-## Nếu gặp lỗi
-| Lỗi thường gặp | Nguyên nhân | Cách xử lý |
-|---|---|---|
-| [Mô tả lỗi] | [Lý do] | [Cách giải quyết] |
+```plantuml
+@startuml
+!theme plain
+|Role A|
+start
+:[Bước 1];
+if (Điều kiện?) then (Có)
+  :[Bước 2a];
+else (Không)
+  :[Bước 2b];
+endif
+|Role B|
+:[Bước 3 — Phê duyệt];
+|Lark System|
+:[Thông báo tự động];
+stop
+@enduml
 ```
+
+#### Chuẩn Bảng Form cho mỗi bước
+
+Mỗi bước yêu cầu nhập liệu phải có bảng:
+
+| # | Trường thông tin | Kiểu dữ liệu | Bắt buộc | Hướng dẫn điền |
+|---|---|---|---|---|
+| 1 | [Tên field] | Text / Số / Date / Select | ✅ / ❌ | [Mô tả + ví dụ cụ thể] |
 
 ### Bước 3: Tổ chức tài liệu trong hồ sơ khách hàng
 
-Lưu toàn bộ tài liệu end-user vào thư mục:
+Lưu toàn bộ tài liệu end-user vào thư mục client:
 ```
-05_Clients/[TenCongTy]/06_User_Guide/
-├── [QuyTrinh1]_[VaiTro]_Guide.md
-├── [QuyTrinh2]_[VaiTro]_Guide.md
-└── README.md     ← Index danh sách tài liệu hướng dẫn
+05_Clients/[TenCongTy]/
+└── 06_User_Guide.md     ← 1 file duy nhất, bao gồm tất cả roles và quy trình
 ```
+
+> **Tại sao 1 file?** Giúp consultant dễ maintain, khách hàng dễ chia sẻ, tránh link broken giữa các file riêng lẻ.
 
 ### Bước 4: Bàn giao và đào tạo
 

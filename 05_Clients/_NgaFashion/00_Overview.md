@@ -1,11 +1,11 @@
 ---
 type: Client
-status: Discovery
-industry: [Điền ngành nghề]
+status: Consulting
+industry: Fashion Retail
 ---
-# 🏢 [Tên Công Ty] — Tổng quan Dự án
+# 🏢 Nga Fashion — Tổng quan Dự án
 
-**Ngày khởi tạo:** [YYYY-MM-DD] | **Consultant:** [Tên] | **Trạng thái:** 🟡 Discovery
+**Ngày khởi tạo:** 2026-04-11 | **Consultant:** Antigravity | **Trạng thái:** 🟢 Consulting / Designing
 
 ---
 
@@ -13,20 +13,20 @@ industry: [Điền ngành nghề]
 
 | | |
 |---|---|
-| **Quy mô** | |
-| **Ngành** | |
-| **POC** | |
-| **Gói dịch vụ** | |
-| **Timeline** | |
+| **Quy mô** | SME (3 FT, 2 PT) |
+| **Ngành** | Thời trang bán lẻ |
+| **POC** | Chị Nga |
+| **Gói dịch vụ** | Tư vấn & Thiết kế Hệ thống Phân ca Tự động |
+| **Timeline** | 1 Tuần |
 
 ## Trạng thái tiến độ
 
 - [x] Giai đoạn 1 – BA: Khám phá nhu cầu → [[02_BA_Report]]
 - [x] Giai đoạn 2 – SA: Chiến lược giải pháp → [[03_SA_Report]]
 - [x] Giai đoạn 3 – UML: Thiết kế hệ thống → [[04_UML_Design]]
-- [ ] Giai đoạn 4 – Build & Handoff
-- [ ] Giai đoạn 5 – Build: Triển khai thực tế
+- [x] Giai đoạn 4 – Build & Handoff (Đã hoàn thiện thiết kế)
+- [ ] Giai đoạn 5 – Build: Triển khai thực tế trên Lark Base
 - [x] Giai đoạn 6 – User Documentation → [[06_User_Guide]]
 
 ## Liên kết nhanh
-- [[01_Problem_Statement]] | [[04_Communication_Log]] | [[05_References/]] | [[06_User_Guide]]
+- [[02_BA_Report]] | [[03_SA_Report]] | [[04_UML_Design]] | [[06_User_Guide]]

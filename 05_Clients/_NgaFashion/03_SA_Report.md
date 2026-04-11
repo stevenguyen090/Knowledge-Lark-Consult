@@ -10,18 +10,72 @@ version: 1.0
 **Ngày tạo:** 2026-04-11 | **Tham chiếu:** 02_BA_Report | **Kế hoạch Lark:** Free / Basic
 
 ## 1. Map Pain Point vào Vấn đề Thiết kế
-- **CHUYỂN HOÁ:** Pain P-01 (Đau đầu tính toán quỹ giờ và ngày nghỉ) -> **Design Problem:** Xây dựng một Workspace xếp lịch cho phép tính tự động và hiển thị cảnh báo (Warning Dashboard) ngay trên lưới dữ liệu (Grid) khi có biến số vi phạm.
+- **CHUYỂN HOÁ:** Pain P-01 (Đau đầu tính toán quỹ giờ và ngày nghỉ) -> **Design Problem:** Xây dựng hệ thống **Auto-Scheduling** dự trên thuật toán (Solver) để gợi ý lịch làm việc tối ưu cho FT/PT.
 
-## 2. Vai Trò của Lark
-- **Lark Base** làm *Core Operational Layer*: Lưu trữ bảng nhân sự, danh mục ca, và lịch làm việc mỗi ngày. Cung cấp Data Validation Engine qua Formula và Rollup.
-- **Lark Bot** làm *Notifier Layer*: Bắn lịch phân ca đã hoàn thiện vào Group làm việc tổng cuối mỗi tuần.
+## 2. Mô Hình Kiến Trúc Phân Tầng (Layered Architecture)
 
-## 3. Kiến Trúc High-Level
-- Quản lý lập lịch tại `Bảng Khai Báo Ca` (Grid / Calendar View).
-- Lark Base rollup dữ liệu lại `Bảng Nhân Sự` nhóm theo từng tuần (Week X). Cột Formula thực hiện validate: So sánh chỉ tiêu và thực tế.
-- Màu sắc trực quan báo hiệu: 🟢 Hợp lệ ; 🔴 Cần xếp lại lịch.
+Giải pháp được xây dựng theo mô hình 3 lớp để đảm bảo tính module và dễ bảo trì:
 
-## 4. Schema Lark Base (Sơ đồ bảng dữ liệu / ERD)
+```plantuml
+@startuml
+package "Client Layer (Lark App)" {
+  [Lark Messenger] as UI_Chat
+  [Lark Base UI] as UI_Base
+}
+
+package "Logic Layer (Solver Middleware)" {
+  [Script Bitable / AppScript] as Solver
+  [Constraint Engine] as Engine
+}
+
+package "Data Layer (DB)" {
+  database "Lark Base Tables" as DB
+}
+
+UI_Base --> DB : Input (Nhân sự, Ngày nghỉ)
+Solver --> DB : Read Config & Constraints
+Solver --> Engine : Tinh toán tổ hợp ca
+Engine --> Solver : Trả về mảng Lịch tối ưu
+Solver --> DB : Batch Write Records
+DB --> UI_Chat : Gửi thông báo tự động (Tuần sau)
+@enduml
+```
+
+## 3. Chiến Lược Xử Lý Logic (Solver Algorithm)
+
+Thay vì dùng Formula (bị giới hạn về khả năng tạo dữ liệu), chúng ta sử dụng **Backtracking Algorithm** hoặc **Priority-based Assignment** trong Script:
+
+1.  **Giai đoạn 1 (Preprocessing):** Lấy danh sách Staff, loại bỏ ngày Off đã đăng ký.
+2.  **Giai đoạn 2 (Hard Constraints):** Ưu tiên gán FT vào 14 ca Offline (Cố định cửa hàng). Sử dụng cơ chế Round Robin để chia đều ca sáng/chiều.
+3.  **Giai đoạn 3 (Role Constraints):** Trám PT vào ca Tối đêm. Kiểm tra chéo: nếu PT nghỉ -> điều chuyển 1 FT làm "2 ca/ngày".
+4.  **Giai đoạn 4 (Soft Constraints):** Kiểm tra "Trải đều ca" và "Online < 2 ngày". Nếu vi phạm, thực hiện Swap (Hoán đổi) giữa các ngày để tối ưu.
+5.  **Giai đoạn 5 (Post-processing):** Tính toán tổng giờ, làm tròn và ghi vào Base qua API `create_records`.
+
+---
+
+## 4. Đặc Tả Kỹ Thuật (Technical Spec)
+
+### 4.1. Môi trường thực thi (Runtime)
+- **Lựa chọn:** **Lark Base Script Extension**.
+- **Lý do:** Chạy trực tiếp trên trình duyệt hoặc Lark Client, không cần server ngoài, bảo mật tối đa dữ liệu nhân sự của SME.
+- **Trigger:** Nút bấm (Button field) "Xếp ca tự động" tại Bảng điều khiển.
+
+### 4.2. Quản lý Lỗi & Exception Handling
+- **Tình huống Không tìm được phương án tối ưu:** Script sẽ không dừng lại mà thực hiện "Best-effort" (Xếp tốt nhất có thể) và trả về Field `Log_Warning` ghi rõ: "Thiếu nhân sự ca X ngày Y".
+- **Tình huống API Rate Limit:** Sử dụng cơ chế **Chunking** (Chia nhỏ 50 records/lần gọi) để tránh giới hạn của Lark OpenAPI.
+
+---
+
+## 5. Schema Lark Base (Mở rộng phục vụ Script)
+
+| Bảng | Trường | Kiểu | Vai trò |
+|---|---|---|---|
+| `tbl_NhanSu` | `Target_Hours` | Number | Chỉ tiêu giờ (FT: 40, PT: 20) |
+| `tbl_NhanSu` | `Offline_Count` | Rollup | Đếm số ca Offline trong tuần |
+| `tbl_Control` | `Week_Selection` | Date | Chọn tuần cần xếp ca |
+| `tbl_Control` | `Trigger_Button` | Button | Nút bấm gọi Script |
+
+---
 
 ```plantuml
 @startuml
@@ -62,17 +116,6 @@ Shift "1" --- "N" Plan
 @enduml
 ```
 
-## 5. Giải pháp chi tiết theo Quy Trình (Logic Formula)
-
-**Bảng `tbl_LichLamViec`:**
-Sinh ra công thức `Thu_Trong_Tuan` dựa trên cột Ngày. 
-
-**Bảng `tbl_NhanSu` (Phân chia the tuần làm việc):**
-Dùng sợi dây liên kết tới `tbl_LichLamViec` theo từng tuần để đếm (Rollup).
-- Ràng buộc 1 (FT làm 6 ngày): Kiểm đếm COUNT(Unique Days). `IF(Loai_Hinh="FT" AND Count_Days != 6, "🔴 Sai số ngày", "🟢 Chuẩn")`
-- Ràng buộc 2 (Giờ PT = 1/2 Giờ FT): Giả sử target giờ FT/tuần là 40h -> PT là 20h. `IF(Loai_Hinh="PT" AND Rollup_Hours > [1/2 * Target_FT], "🔴 Lố giờ", "🟢 Chuẩn")`
-- Ràng buộc 3 (Ngày nghỉ): Tại bảng nhân sự, cấu hình kiểm tra xem những ngày người đó không có record nào trong `tbl_LichLamViec` có rơi vào T2 hoặc CN hay không. (Cách xử lý dễ hơn: Bắt buộc Quản lý tạo record `OFF` trong `tbl_LichLamViec` nếu ngày đó NV được nghỉ, sau đó check xem ngày đó là T2 hay CN).
-
 ## 6. Lên cấu trúc Automation & Approval
 > **Automation ID:** AUT-001 
 > **Trigger:** Lên lịch (Scheduled) - 20h00 tối Thứ 7 Hàng Tuần.
@@ -82,9 +125,16 @@ Dùng sợi dây liên kết tới `tbl_LichLamViec` theo từng tuần để đ
 Toàn bộ Source of Truth về phân ca nằm trên Lark Base. Dữ liệu này có thể được sử dụng tiếp tục để tính công / lương cuối tháng (nội suy từ tổng số giờ của PT và tổng ca của FT).
 
 ## 8. Lộ Trình Triển Khai (Phased Rollout)
-- **Phase 1:** Khởi tạo 3 bảng cơ sở Base, setup danh mục ca 06:00 đến 23:00.
-- **Phase 2:** Cấu hình Formula Validate, thử nghiệm với dữ liệu giả 1 tuần. Điều chỉnh độ sai lệch của mức giờ (PT = 1/2 FT, sai số +-2h).
-- **Phase 3:** Setup Lark Bot gửi thông báo, bàn giao template để cửa hàng sử dụng vào Chủ nhật tuần này.
+- **Phase 1 (Cấu trúc):** Thiết lập 3 bảng Core và hệ thống Formula Cảnh báo.
+- **Phase 2 (Logic):** Viết Script Solver xử lý tổ hợp ca ngay trên Base.
+- **Phase 3 (Notify):** Cấu hình Lark Bot gửi Card thông báo lịch trực quan.
 
-## 9. Handoff Notes cho UML Engineer
-Chuyển tiếp Database Schema tới bước Build. Có thể thiết lập Lark Base tự động qua ERD Script nếu cần tốc độ, vì chỉ bao gồm 3 bảng trọng tâm và liên kết với nhau bằng các hàm cơ bản (Rollup + Link).
+## 9. ROI & Giá trị mang lại
+- **Tiết kiệm:** Giảm thời gian xếp ca từ 3-4 tiếng/tuần xuống còn **5 phút**.
+- **Chính xác:** Loại bỏ hoàn toàn sai sót tính toán giờ làm cho PT (vốn gây tranh cãi về lương).
+- **Trải nghiệm:** Nhân viên nhận lịch chuyên nghiệp qua Bot, không cần check ảnh chụp màn hình Zalo mờ.
+
+---
+
+## 10. Handoff Notes cho UML Engineer
+Chuyển tiếp Database Schema tới bước Build. Tập trung vào việc thiết kế **Sequence Diagram** cho luồng "Script gọi API Base" để đảm bảo tính toàn vẹn dữ liệu khi ghi Patch số lượng lớn.

@@ -44,9 +44,9 @@ entity "Nhân Sự (tbl_NhanSu)" as P_NhanSu {
   --
   Tên Nhân Sự (User)
   Loại Hình (SingleSelect) : FT / PT
-  Tổng Giờ Tuần Này (Rollup) : Tổng số giờ từ lịch
-  Số Ngày Làm Tuần Này (Rollup) : Điếm số ngày độc nhất
-  Validator_Trạng Thái (Formula) : Đánh giá Xanh/Đỏ
+  Tổng Giờ Tuần Này (Rollup) : SUM(Giờ)
+  Số Ngày Làm Tuần Này (Rollup) : COUNT_DISTINCT(Ngày Làm)
+  Validator_Trạng Thái (Formula) : Kiểm tra (Ngày=6? Giờ_PT=1/2_FT?)
 }
 
 entity "Danh Mục Ca (tbl_DanhMucCa)" as P_DanhMucCa {
@@ -88,8 +88,8 @@ database "Bảng Nhân Sự\n(Lark Base)" as BaseNhanSu
 
 Manager -> BaseLich : Thêm Record: Nguyễn Văn A, Ca Sáng, Ngày T3
 BaseLich -> BaseNhanSu : Link record, Lookup Số Giờ
-BaseNhanSu -> BaseNhanSu : Rollup tính tổng giờ + số ngày làm trong tuần
-BaseNhanSu -> BaseNhanSu : Chạy Formula Validate: \n1. Giờ PT = 1/2 FT? \n2. FT làm đủ 6 ngày? \n3. Ngày nghỉ = T2/CN?
+BaseNhanSu -> BaseNhanSu : Rollup tính tổng giờ + COUNT_DISTINCT(ngày làm)
+BaseNhanSu -> BaseNhanSu : Chạy Formula Validate: \n1. Giờ PT = 1/2 FT? \n2. FT làm đủ 6 ngày độc nhất? \n3. Ngày nghỉ = T2/CN? \n4. Cảnh báo nếu ca trùng giờ?
 
 alt Dữ liệu Hợp lệ
   BaseNhanSu --> Manager : Hiển thị 🟢 Chuẩn

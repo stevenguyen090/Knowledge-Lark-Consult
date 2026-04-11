@@ -18,13 +18,10 @@ version: 1.0
 - **Cơ cấu nhân sự:** 5 người, trong đó gồm 3 Full-time (FT) và 2 Part-time (PT).
 - **Ca làm việc tiêu chuẩn:**
   - Ca 1 (Sáng sớm): `06:00 - 09:00` (3 giờ) — Thường là ca tuỳ chọn hoặc tăng cường.
-  - Ca 2 (Sáng chiều): `08:30 - 16:00` (7.5 giờ)
-  - Ca 3 (Chiều tối): `12:00 - 18:00` (6 giờ)
-  - Ca 4 (Tối đêm): `17:30 - 23:00` (5.5 giờ)
-- **Quy tắc xếp ca (Ràng buộc):**
-  - **Giờ làm việc của PT:** Tổng số giờ làm việc trong tuần của nhân viên PT phải bằng 1/2 (50%) tổng số giờ làm việc của nhân viên FT.
-  - **Ngày làm việc của FT:** Mỗi nhân viên FT phải làm việc đủ 6 ngày/tuần.
-  - **Ngày nghỉ ca (Off-day):** Mỗi nhân sự chỉ được nghỉ phép (off) 1 buổi/tuần, và ngày nghỉ bắt buộc phải rơi vào Chủ Nhật hoặc Thứ Hai.
+  - **Ngày nghỉ ca (Off-day):** Mỗi nhân sự được nghỉ 1 buổi/tuần, bắt buộc rơi vào Chủ Nhật hoặc Thứ Hai.
+  - **Làm thêm ca:** Cho phép 1 nhân sự làm 2 ca trong 1 ngày (ưu tiên các ca không trùng giờ).
+  - **Định biên ca Tối đêm:** Cần ít nhất 2 Part-time hoặc 1 Full-time làm thêm/trực online để đảm bảo vận hành.
+  - **Địa điểm:** Sáng sớm & Tối đêm (Online tại nhà); Sáng chiều & Chiều tối (Offline tại cửa hàng). Tối đa 2 ngày làm tại nhà/tuần cho FT.
 
 ## 3. Quy Trình Chi Tiết (End-to-End Processes)
 
@@ -57,7 +54,8 @@ version: 1.0
 - **STATEMENT:** *"Mỗi tuần xếp ca lại, việc đảm bảo giờ của PT bằng 1/2 FT, rồi FT đủ 6 ngày làm, nghỉ đúng Chủ Nhật/Thứ 2 là rất đau đầu. Xếp xong tính lại cứ bị dư hoặc thiếu giờ."*
 - **IMPACT:** Tổn thất thời gian của Quản lý hàng tuần, nguy cơ xếp sai dẫn đến tranh chấp lương/giờ làm của nhân viên.
 - **SEVERITY:** 🔴 Critical
-- **ROOT CAUSE:** Tính toán thủ công bằng mắt và trí nhớ, thiếu công cụ tự động cảnh báo (Automated Validation).
+- **ROOT CAUSE:** Tính toán thủ công bằng mắt và trí nhớ.
+- **SOLUTION EXPECTATION:** Hệ thống tự động gợi ý/xếp ca (Auto-scheduling) dựa trên các ràng buộc đã thiết lập. Quản lý chỉ cần kiểm duyệt lại.
 
 ## 8. Ràng Buộc Thiết Kế (Constraints)
 - Ngân sách và công cụ: Sử dụng hệ sinh thái Lark Base (không sử dụng phần mềm mua ngoài cồng kềnh).
@@ -67,4 +65,5 @@ version: 1.0
 - Có những ngày dồn đông khách cần thêm người thì có vi phạm luật 1 ngày/người/ca không hay có thể tăng cường 2 người cùng 1 ca?
 
 ## 10. Handoff Notes for Solution Architect
-- Thiết kế hệ thống theo hướng **Validate**, không phải **Auto-Schedule**. Nghĩa là Quản lý vẫn thao tác xếp lịch thủ công (Human-in-the-loop), còn Lark Base đóng vai trò là bảng tính thông minh (Smart Tracker) tự động đánh highlight Xanh/Đỏ nếu người xếp lịch vi phạm quy tắc quỹ giờ.
+- Hệ thống hướng tới **Auto-Schedule** (Tự động gợi ý lịch). 
+- Cần xử lý logic phức tạp thông qua **Lark Base Script** hoặc **AppScript API** để phân bổ ca dựa trên tổ hợp nhân sự hiện có (3 FT, 2 PT), đảm bảo coverage ca đêm và giới hạn 2 ngày Online/tuần cho FT.

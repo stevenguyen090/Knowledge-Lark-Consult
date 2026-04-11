@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
+                "file": "03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fashion_Ads_Analytics"
+              "title": "F&B_Xep_ca"
             }
           }
         ],
@@ -202,6 +202,9 @@
   },
   "active": "00d5a391e5ad0cf4",
   "lastOpenFiles": [
+    "04_Templates/Tpl_Usecase.md",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
     "05_Clients/_SEONGON/06_User_Guide.md",
     "04_Templates/Tpl_BA_Report.md",
     "00_MOC/00.01_MOC_Business.md",
@@ -224,14 +227,11 @@
     "05_Clients/README.md",
     "05_Clients",
     "04_Templates/Tpl_User_Guide.md",
-    "04_Templates/Tpl_Usecase.md",
     "04_Templates/Tpl_Thong_tin_Khach.md",
     "04_Templates/Tpl_SA_Report.md",
     "04_Templates/Tpl_LarkBase_Convention.md",
     "04_Templates/Tpl_Client_Project.md",
     "04_Templates",
-    "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
-    "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
     "03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
     "03_Usecases_Lark_AI/Theo_Linh_vuc",
     "03_Usecases_Lark_AI",

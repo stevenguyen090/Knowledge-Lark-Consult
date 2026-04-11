@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Consulting_Process/06_User_Documentation.md",
+                "file": "05_Clients/_SEONGON/06_User_Guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06_User_Documentation"
+              "title": "06_User_Guide"
             }
           }
         ]
@@ -187,15 +187,15 @@
   },
   "active": "c82367c5d92c939e",
   "lastOpenFiles": [
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
+    "02_Consulting_Process/06_User_Documentation.md",
     "05_Clients/_SEONGON/06_User_Guide.md",
     "04_Templates/Tpl_User_Guide.md",
     "02_Consulting_Process/03_Thiet_ke_UML.md",
-    "02_Consulting_Process/06_User_Documentation.md",
     "02_Consulting_Process/02_Chien_luoc_SA.md",
     "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "01_Business_Model/Tam_nhin_va_Su_menh.md",
     "01_Business_Model/Mo_hinh_kinh_doanh.md",
-    "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
     "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
     "05_Clients/README.md",
     "README.md",

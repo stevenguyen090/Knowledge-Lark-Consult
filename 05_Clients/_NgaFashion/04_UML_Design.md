@@ -2,18 +2,20 @@
 type: UML Design
 client: Nga Fashion
 project: Phân Ca Quản Lý Cửa Hàng
-version: 1.0
+version: 1.1
 ---
 
 # Báo Cáo Thiết Kế Hệ Thống (UML & ERD) — Nga Fashion
 
 **Ngày tạo:** 2026-04-11 | **Tham chiếu:** 03_SA_Report | **Trạng thái:** Hoàn thành
 
-Tài liệu này cung cấp các bản thiết kế kỹ thuật chi tiết để phục vụ cho giai đoạn Build (Thiết lập Lark Base).
+Tài liệu này cung cấp các bản thiết kế kỹ thuật chi tiết, tuân thủ bộ quy tắc `Tpl_UML_Guide` và `Tpl_LarkBase_Convention`.
+
+---
 
 ## 1. Sơ Đồ Ngữ Cảnh (Context Diagram)
 
-Sơ đồ tổng quan về cách các bộ phận tương tác với hệ thống quản lý lịch trực.
+Mô tả tổng quan sự tương tác giữa các bên liên quan và hệ sinh thái giải pháp Nga Fashion.
 
 ```plantuml
 @startuml
@@ -21,53 +23,122 @@ skinparam rectangle {
   BackgroundColor #F0F4FF
   BorderColor #3366CC
 }
-actor "Quản Lý Cửa Hàng" as Manager
-actor "Nhân Viên (FT/PT)" as Staff
+actor "Quản lý (Chị Nga)" as Manager
+actor "Nhân viên Sales (FT/PT)" as Staff
 
-database "Lark Base\n(Quản lý Phân Ca)" as Base
-queue "Lark Bot\n(Messenger)" as Bot
+rectangle "Lark Suite Ecosystem" {
+  database "Lark Base\n(Operational DB)" as Base
+  rectangle "Lark Base Script\n(Solver Engine)" as Script
+  queue "Lark Bot\n(Messenger)" as Bot
+}
 
-Manager --> Base : 1. Xếp ca hàng tuần & Kiểm tra Validate (Xanh/Đỏ)
-Base --> Bot : 2. Tự động gửi thông báo lịch làm việc (20h T7)
-Bot --> Staff : 3. Nhận lịch và xác nhận
+Manager --> Base : 1. Khai báo nhân sự & Ngày nghỉ
+Script --> Base : 2. Đọc cấu hình & Tự động xếp ca
+Base --> Bot : 3. Trigger thông báo lịch tuần
+Bot --> Staff : 4. Nhận lịch & Phản hồi
 @enduml
 ```
 
-## 2. Sơ Đồ Thực Thể Liên Kết (ERD - Base Blueprint)
+---
 
-Sơ đồ ERD chuẩn bị cho việc khởi tạo bảng trên Lark Base. Đã định nghĩa rõ các field type tương thích với Lark.
+## 2. Sơ Đồ Hoạt Động (Swimlane Activity Diagram)
+
+Mô tả quy trình nghiệp vụ và luồng xử lý chi tiết của **AppScript / Base Script Solver**.
 
 ```plantuml
 @startuml
-entity "Nhân Sự (tbl_NhanSu)" as P_NhanSu {
-  * Mã Nhân Sự (AutoNumber)
+|Quản lý (Chị Nga)|
+start
+:Mở bảng "Nhân sự" trên Lark Base;
+:Chọn ngày nghỉ (CN/T2) cho từng bạn;
+:Nhấn nút [Auto-Schedule];
+
+|#F0F4FF|AppScript / Base Script Solver|
+:Phase A: Thu thập dữ liệu;
+note right
+  - Lấy danh sách Staff (FT/PT)
+  - Lấy cấu hình ca & Target hours
+end note
+:Phase B: Phân tích Ràng buộc (Solver);
+if (Check Hard Constraints) then (OK)
+  :Ưu tiên gán FT vào ca Offline;
+  :Gán PT vào ca Tối đêm;
+  :Xử lý gán 2 ca/ngày nếu thiếu người;
+else (Vi phạm)
+  :Ghi log cảnh báo vào Base;
+endif
+:Phase C: Tối ưu hóa (Soft Constraints);
+:Kiểm tra quy tắc WFH (< 2 ngày);
+:Check "Trải đủ ca" cho FT;
+:Phase D: Ghi kết quả;
+:Batch Create records vào bảng "Lịch làm việc";
+
+|Lark Base|
+:Cập nhật Grid View & Calendar View;
+:Formula chạy Validate (Xanh/Đỏ);
+
+|Lark Bot|
+:Trigger thông báo (Tối Thứ 7);
+:Gửi Card lịch làm việc vào Group;
+
+|Nhân viên Sales|
+:Nhận thông báo trên Lark Messenger;
+stop
+@enduml
+```
+
+---
+
+## 3. Sơ Đồ Thực Thể Liên Kết (ERD - Blueprint)
+
+Bản vẽ thi công chuẩn hóa cho công cụ **Auto-Build**. Tuân thủ `Tpl_LarkBase_Convention`.
+
+```plantuml
+@startuml
+title **ERD — Hệ thống Quản lý Phân ca Nga Fashion**
+skinparam linetype ortho
+
+entity "Nhân sự" as P_NhanSu {
+  * Mã nhân sự (AutoNumber)
   --
-  Tên Nhân Sự (User)
-  Loại Hình (SingleSelect) : FT / PT
-  Tổng Giờ Tuần Này (Rollup) : SUM(Giờ)
-  Số Ngày Làm Tuần Này (Rollup) : COUNT_DISTINCT(Ngày Làm)
-  Validator_Trạng Thái (Formula) : Kiểm tra (Ngày=6? Giờ_PT=1/2_FT?)
+  Tên nhân viên (Person)
+  Loại hình (SingleSelect) : 🟡 FT, 🔵 PT
+  Ngày nghỉ cố định (SingleSelect) : CN, Thứ 2
+  Tổng giờ tuần này (Rollup)
+  Số ngày làm tuần này (Rollup) : COUNT_DISTINCT
+  Tình trạng (Formula) : 🟢 Chuẩn, 🔴 Cần chỉnh
+  Trạng thái (SingleSelect)
+  Ngày tạo (CreatedTime)
+  Người tạo (Person)
+  Ngày cập nhật (ModifiedTime)
 }
 
-entity "Danh Mục Ca (tbl_DanhMucCa)" as P_DanhMucCa {
-  * Mã Ca (AutoNumber)
+entity "Danh mục ca" as P_DanhMucCa {
+  * Mã ca (AutoNumber)
   --
-  Tên Ca (Text) : Sáng sớm, Sáng chiều...
-  Bắt Đầu (Time)
-  Kết Thúc (Time)
-  Số Giờ (Number)
+  Tên ca (Text) : Sáng sớm, Sáng chiều...
+  Bắt đầu (DateTime)
+  Kết thúc (DateTime)
+  Số giờ (Number)
+  Hình thức (SingleSelect) : Online, Offline
+  Trạng thái (SingleSelect)
+  Ngày tạo (CreatedTime)
+  Ngày cập nhật (ModifiedTime)
 }
 
-entity "Lịch Làm Việc (tbl_LichLamViec)" as P_LichLamViec {
-  * ID (AutoNumber)
+entity "Lịch làm việc" as P_LichLamViec {
+  * Mã lịch trực (AutoNumber)
   --
-  Người Làm (DuplexLink) -> P_NhanSu
-  Ca Làm (DuplexLink) -> P_DanhMucCa
-  Ngày Làm (Date)
-  Tuần (Formula) : YEARWEEK(Ngày Làm)
-  Thứ (Formula) : WEEKDAY(Ngày Làm)
-  Số Giờ Ca (Lookup) -> P_DanhMucCa.Số Giờ
-  Là Ngày Nghỉ? (Checkbox) : Check nếu đăng ký nghỉ
+  Nhân viên (DuplexLink) -> Nhân sự
+  Ca làm việc (DuplexLink) -> Danh mục ca
+  Ngày làm việc (DateTime)
+  Tuần (Formula)
+  Thứ (Formula)
+  Ghi chú (Text)
+  Trạng thái (SingleSelect)
+  Ngày tạo (CreatedTime)
+  Người tạo (Person)
+  Ngày cập nhật (ModifiedTime)
 }
 
 P_NhanSu "1" -- "N" P_LichLamViec
@@ -75,52 +146,41 @@ P_DanhMucCa "1" -- "N" P_LichLamViec
 @enduml
 ```
 
-## 3. Sơ Đồ Trình Tự: Logic Cảnh Báo (Validation Logic)
+---
 
-Mô tả luồng Quản lý nhập liệu và hệ thống phản hồi kết quả tính toán giờ làm.
+## 4. Sơ Đồ Trình Tự: Luồng Xử Lý Solver (Message Sequence)
 
-```plantuml
-@startuml
-autonumber
-participant "Quản Lý" as Manager
-database "Bảng Lịch Làm Việc\n(Lark Base)" as BaseLich
-database "Bảng Nhân Sự\n(Lark Base)" as BaseNhanSu
-
-Manager -> BaseLich : Thêm Record: Nguyễn Văn A, Ca Sáng, Ngày T3
-BaseLich -> BaseNhanSu : Link record, Lookup Số Giờ
-BaseNhanSu -> BaseNhanSu : Rollup tính tổng giờ + COUNT_DISTINCT(ngày làm)
-BaseNhanSu -> BaseNhanSu : Chạy Formula Validate: \n1. Giờ PT = 1/2 FT? \n2. FT làm đủ 6 ngày độc nhất? \n3. Ngày nghỉ = T2/CN? \n4. Cảnh báo nếu ca trùng giờ?
-
-alt Dữ liệu Hợp lệ
-  BaseNhanSu --> Manager : Hiển thị 🟢 Chuẩn
-else Dữ liệu Vi phạm (Lố giờ, thiếu ngày)
-  BaseNhanSu --> Manager : Hiển thị 🔴 Cần xếp lại (Kèm lý do)
-  Manager -> BaseLich : Điều chỉnh lại Ca / Ngày trực
-end
-@enduml
-```
-
-## 4. Sơ Đồ Trình Tự: Tự Động Gửi Lịch (Automation)
+Mô tả cách Script tương tác với API của Lark để ghi dữ liệu.
 
 ```plantuml
 @startuml
 autonumber
-participant "Lark Automations" as Auto
-database "Bảng Lịch Làm Việc" as BaseLich
-queue "Lark Bot" as Bot
-participant "Group Bán Hàng" as Group
+participant "Quản lý" as Manager
+participant "Script Solver" as Solver
+database "Lark Base API" as API
 
-Auto -> Auto : Trigger (Scheduled): 20h00, Thứ 7 hằng tuần
-Auto -> BaseLich : Query: Lấy các Record lịch có Tuần = Tuần sau
-BaseLich --> Auto : Trả về danh sách Lịch làm việc
-Auto -> Bot : Generate tin nhắn tổng hợp kèm link Grid View
-Bot -> Group : Gửi tin nhắn: "Lịch làm việc tuần tới..."
+Manager -> Solver : Click [Auto-Schedule]
+Solver -> API : GET (Dữ liệu Nhân sự & Quy tắc)
+API --> Solver : Trả về JSON Data
+Solver -> Solver : Chạy thuật toán Solver (Phân bổ ca)
+note right of Solver
+  **Thuật toán 5 bước (Priority Solver):**
+  1. **Init:** Đọc Staff & Off-days đầu vào.
+  2. **Offline Match:** Gán 3 FT vào các ca Offline 
+     để đảm bảo shop luôn mở cửa (Ưu tiên Hard Rules).
+  3. **Night Match:** Gán PT vào ca Tối đêm. Nếu thiếu 
+     thì gán FT làm "2 ca/ngày" (Priority Rules).
+  4. **Compliance Check:** Kiểm tra WFH (<2 ngày/tuần) 
+     & Trải đều ca Sáng/Chiều cho FT (Soft Rules).
+  5. **Balancing:** Kiểm soát tổng giờ PT = 1/2 FT.
+end note
+Solver -> API : POST (Batch Create Records - Lịch làm việc)
+API --> Solver : 200 OK (Success)
+Solver -> Manager : Hiển thị "Đã hoàn thành xếp ca"
 @enduml
 ```
 
 ---
-**Cần chuẩn bị cho Phase 4 (Build):**
-- Tạo 3 bảng `tbl_NhanSu`, `tbl_DanhMucCa`, `tbl_LichLamViec`.
-- Code chính xác các Formula kiểm duyệt:
-  - `IF(AND(Loại Hình='FT', Số Ngày!=6), '🔴 Sai ngày', '🟢 K.Tra Giờ')`
-  - Đảm bảo logic tính chéo giờ PT = 1/2 FT (Có thể lấy Target = 20h nếu lập lịch chuẩn 40h).
+**Ghi chú cho Phase 5 (Auto-Build):**
+- Sử dụng các Friendly Name trong ERD (Tiếng Việt) để tạo bảng.
+- Đảm bảo thiết lập `multiple: true` cho trường `Nhân viên` trong bảng `Lịch làm việc` nếu cho phép nhiều nhân sự cùng 1 ca.

@@ -1,41 +1,56 @@
 {
   "main": {
-    "id": "ff12ae91cd823e3e",
+    "id": "73a8568982925536",
     "type": "split",
     "children": [
       {
-        "id": "a03f01425474bd9a",
+        "id": "f6a6e851ffeb33e4",
         "type": "tabs",
         "children": [
           {
-            "id": "c82367c5d92c939e",
+            "id": "781ac548eca0165c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05_Clients/_SEONGON/06_User_Guide.md",
+                "file": "01_Business_Model/Tam_nhin_va_Su_menh.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06_User_Guide"
+              "title": "Tam_nhin_va_Su_menh"
+            }
+          },
+          {
+            "id": "00d5a391e5ad0cf4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Business_Model/Mo_hinh_kinh_doanh.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Mo_hinh_kinh_doanh"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "df0ba0be46e14007",
+    "id": "6c26a702ba4dc933",
     "type": "split",
     "children": [
       {
-        "id": "7196bf5c048253be",
+        "id": "e98701a2e0d4b103",
         "type": "tabs",
         "children": [
           {
-            "id": "9fc76bb8ac14a227",
+            "id": "f198626c9586f2ed",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +63,7 @@
             }
           },
           {
-            "id": "ff6b0286fef83e74",
+            "id": "400eaac077033d32",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +80,7 @@
             }
           },
           {
-            "id": "208fb1b3b33d46b6",
+            "id": "227c66f277305bf7",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,51 +93,51 @@
       }
     ],
     "direction": "horizontal",
-    "width": 202.5
+    "width": 300
   },
   "right": {
-    "id": "719104d297771954",
+    "id": "768e49013da88e70",
     "type": "split",
     "children": [
       {
-        "id": "c54197374d822fed",
+        "id": "622e738e1a59e4a8",
         "type": "tabs",
         "children": [
           {
-            "id": "e679e2894e6e4303",
+            "id": "d24f4caa09752261",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Consulting_Process/03_Thiet_ke_UML.md",
+                "file": "Welcome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
+                "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 03_Thiet_ke_UML"
+              "title": "Backlinks for Welcome"
             }
           },
           {
-            "id": "06472f5b7b719c6b",
+            "id": "0c2d3f180ac15a00",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Business_Model/Mo_hinh_kinh_doanh.md",
+                "file": "Welcome.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Mo_hinh_kinh_doanh"
+              "title": "Outgoing links from Welcome"
             }
           },
           {
-            "id": "5e4df6b1dd8fbc84",
+            "id": "bee2f946f5ec49d5",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +152,7 @@
             }
           },
           {
-            "id": "5d6855f15a51c02b",
+            "id": "f9729acad2bdbcfe",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,29 +166,30 @@
             }
           },
           {
-            "id": "a7857565ea66c28a",
+            "id": "ca9d0cf15818155c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Business_Model/Mo_hinh_kinh_doanh.md",
+                "file": "Welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Mo_hinh_kinh_doanh"
+              "title": "Outline of Welcome"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -181,51 +197,46 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "c82367c5d92c939e",
+  "active": "00d5a391e5ad0cf4",
   "lastOpenFiles": [
-    "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
-    "02_Consulting_Process/06_User_Documentation.md",
-    "05_Clients/_SEONGON/06_User_Guide.md",
-    "04_Templates/Tpl_User_Guide.md",
-    "02_Consulting_Process/03_Thiet_ke_UML.md",
-    "02_Consulting_Process/02_Chien_luoc_SA.md",
-    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
-    "01_Business_Model/Tam_nhin_va_Su_menh.md",
+    "Minh/Test Obsidian.md",
     "01_Business_Model/Mo_hinh_kinh_doanh.md",
-    "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
-    "05_Clients/README.md",
+    "01_Business_Model/Tam_nhin_va_Su_menh.md",
+    "Minh",
+    "Welcome.md",
     "README.md",
-    "00_MOC/00.01_MOC_Business.md",
-    "00_MOC/00.02_MOC_Usecases.md",
-    "04_Templates/Tpl_Client_Project.md",
-    "04_Templates/Tpl_LarkBase_Convention.md",
+    "Resources/Unlocking Customer Needs By Job To Be Done.md",
+    "Resources",
+    "Diagram/Lark AI Agent in Lark workflow.md",
+    "Diagram",
+    "05_Clients/_SEONGON/06_User_Guide.md",
+    "05_Clients/_SEONGON/05_References.md",
     "05_Clients/_SEONGON/01_Communication_Log.md",
     "05_Clients/_SEONGON/00_Overview.md",
-    "Resources/Unlocking Customer Needs By Job To Be Done.md",
-    "05_Clients/_SEONGON/01_Problem_Statement.md",
-    "05_Clients/_SEONGON/05_References.md",
-    "05_Clients/_SEONGON/04_Communication_Log.md",
-    "High level consulting process canvas.canvas",
-    "Finance_Approval_Flow.md",
-    "04_Templates/Tpl_Thong_tin_Khach.md",
-    "05_Clients/_SEONGON/05_References",
     "05_Clients/_SEONGON",
-    "04_Templates/Tpl_SA_Report.md",
-    "04_Templates/Tpl_Usecase.md",
+    "05_Clients/README.md",
     "05_Clients",
-    "High level consulting process canvas 1.canvas",
-    "Untitled.canvas",
-    "Untitled.base",
-    "Untitled 2.canvas",
+    "04_Templates/Tpl_User_Guide.md",
+    "04_Templates/Tpl_Usecase.md",
+    "04_Templates/Tpl_UML_Guide.md",
+    "04_Templates/Tpl_Thong_tin_Khach.md",
+    "04_Templates/Tpl_SA_Report.md",
+    "04_Templates/Tpl_LarkBase_Convention.md",
+    "04_Templates/Tpl_Client_Project.md",
+    "04_Templates/Tpl_BA_Report.md",
     "04_Templates",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Retail_Quan_ly_Cua_hang.md",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/Fashion_Ads_Analytics.md",
+    "03_Usecases_Lark_AI/Theo_Linh_vuc/F&B_Xep_ca.md",
     "03_Usecases_Lark_AI/Theo_Linh_vuc",
     "03_Usecases_Lark_AI",
+    "02_Consulting_Process/Tong_quan_quy_trinh.md",
+    "02_Consulting_Process/06_User_Documentation.md",
+    "02_Consulting_Process/03_Thiet_ke_UML.md",
     "02_Consulting_Process",
-    "01_Business_Model",
-    "00_MOC"
+    "01_Business_Model"
   ]
 }

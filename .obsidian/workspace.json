@@ -6,7 +6,7 @@
       {
         "id": "a03f01425474bd9a",
         "type": "tabs",
-        "dimension": 55.44642857142858,
+        "dimension": 55.43672014260249,
         "children": [
           {
             "id": "c82367c5d92c939e",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Consulting_Process/02_Chien_luoc_SA.md",
+                "file": "01_Business_Model/Mo_hinh_kinh_doanh.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_Chien_luoc_SA"
+              "title": "Mo_hinh_kinh_doanh"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "20b9db909df5a4f1",
         "type": "split",
-        "dimension": 44.55357142857143,
+        "dimension": 44.563279857397504,
         "children": [
           {
             "id": "c64920a80fcdf016",
@@ -141,6 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01_Business_Model/Mo_hinh_kinh_doanh.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +151,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Mo_hinh_kinh_doanh"
             }
           },
           {
@@ -231,10 +232,10 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "51f1f199f3c92caf",
+  "active": "c82367c5d92c939e",
   "lastOpenFiles": [
-    "Resources/Unlocking Customer Needs By Job To Be Done.md",
     "02_Consulting_Process/02_Chien_luoc_SA.md",
+    "Resources/Unlocking Customer Needs By Job To Be Done.md",
     "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "05_Clients/_NgaFashion/02_BA_Report.md",
     "05_Clients/_NgaFashion/03_SA_Report.md",

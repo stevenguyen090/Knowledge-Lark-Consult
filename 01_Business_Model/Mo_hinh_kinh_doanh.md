@@ -25,13 +25,13 @@ version: March 2026
 
 ## 2. 🎯 PHÂN KHÚC KHÁCH HÀNG (CUSTOMER SEGMENTS)
 
-**Khách hàng mục tiêu:** CEO/Founder doanh nghiệp SME Việt Nam, 5–100 nhân sự, giai đoạn **Growth → Scaling**.
+**Khách hàng mục tiêu:** CEO/Founder doanh nghiệp SME Việt Nam, 10–50 nhân sự, giai đoạn **Growth → Scaling**.
 
 | Đặc điểm        | Chi tiết                                                 |
 | --------------- | -------------------------------------------------------- |
 | Quy mô phổ biến | 10–50 nhân sự (chiếm đa số)                              |
 | Ngành           | Bán lẻ, Sản xuất, Dịch vụ (Agency, Spa, Clinic), Fitness |
-| Địa lý          | TP.HCM, Đà Nẵng, Hà Nội                                  |
+| Địa lý          | TP.HCM, Hà Nội                                           |
 | Không cần       | Biết kỹ thuật — chỉ cần dùng được Zalo/smartphone        |
 
 **Early Adopters:** CEO đang tốn >1h/ngày xử lý việc lẽ ra nhân viên tự làm được, và đã thất bại với Excel/Zalo/Phần mềm.

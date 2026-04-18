@@ -8,7 +8,6 @@ version: 1.0
 # Báo cáo Phân tích Kinh doanh (BA Report) — Nga Fashion
 
 **Ngày tạo:** 2026-04-11 | **Prepared by:** Consultant | **Trạng thái:** Phase 1 Complete
-
 ## 1. Bối Cảnh (Business Context)
 - Cửa hàng thời trang SME (Nga Fashion).
 - Đội ngũ nhân sự bán hàng cần lên lịch ca làm việc theo tuần.
@@ -60,7 +59,7 @@ version: 1.0
 ## 8. Ràng Buộc Thiết Kế (Constraints)
 - Ngân sách và công cụ: Sử dụng hệ sinh thái Lark Base (không sử dụng phần mềm mua ngoài cồng kềnh).
 
-## 9. Cấu Hỏi Khám Phá (Discovery Questions)
+## 9. Câu Hỏi Khám Phá (Discovery Questions)
 - Ca Sáng sớm (06:00-09:00) có nhân sự chuyên trách không hay ai cũng có thể làm?
 - Có những ngày dồn đông khách cần thêm người thì có vi phạm luật 1 ngày/người/ca không hay có thể tăng cường 2 người cùng 1 ca?
 

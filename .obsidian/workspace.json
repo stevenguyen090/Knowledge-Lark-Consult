@@ -6,6 +6,7 @@
       {
         "id": "a03f01425474bd9a",
         "type": "tabs",
+        "dimension": 65.89285714285714,
         "children": [
           {
             "id": "c82367c5d92c939e",
@@ -20,23 +21,52 @@
               "icon": "lucide-file",
               "title": "02_Chien_luoc_SA"
             }
+          }
+        ]
+      },
+      {
+        "id": "20b9db909df5a4f1",
+        "type": "split",
+        "dimension": 34.10714285714286,
+        "children": [
+          {
+            "id": "c64920a80fcdf016",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "51f1f199f3c92caf",
+                "type": "leaf",
+                "state": {
+                  "type": "graph",
+                  "state": {},
+                  "icon": "lucide-git-fork",
+                  "title": "Graph view"
+                }
+              }
+            ]
           },
           {
-            "id": "51f1f199f3c92caf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "05_Clients/_NgaFashion/02_BA_Report.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "02_BA_Report"
-            }
+            "id": "92cf2bc447081516",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "ebe5c5db7cdc94e6",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "01_Kham_pha_nhu_cau_BA"
+                }
+              }
+            ]
           }
         ],
-        "currentTab": 1
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -109,7 +139,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Consulting_Process/03_Thiet_ke_UML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +148,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 03_Thiet_ke_UML"
+              "title": "Backlinks"
             }
           },
           {
@@ -202,17 +231,17 @@
   },
   "active": "51f1f199f3c92caf",
   "lastOpenFiles": [
+    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
+    "02_Consulting_Process/02_Chien_luoc_SA.md",
+    "05_Clients/_NgaFashion/02_BA_Report.md",
     "05_Clients/_NgaFashion/03_SA_Report.md",
     "04_Templates/Tpl_SA_Report.md",
     "05_Clients/_NgaFashion/04_UML_Design.md",
     "05_Clients/_NgaFashion/06_User_Guide.md",
     "05_Clients/_NgaFashion/05_References.md",
-    "05_Clients/_NgaFashion/02_BA_Report.md",
-    "02_Consulting_Process/02_Chien_luoc_SA.md",
     "00_MOC/00.00_Home.md",
     "00_MOC/00.01_MOC_Business.md",
     "00_MOC/00.02_MOC_Usecases.md",
-    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "Excalidraw/Drawing 2026-04-11 21.05.21.excalidraw.md",
     "Excalidraw",
     "02_Consulting_Process/03_Thiet_ke_UML.md",

@@ -6,7 +6,7 @@
       {
         "id": "a03f01425474bd9a",
         "type": "tabs",
-        "dimension": 65.89285714285714,
+        "dimension": 55.44642857142858,
         "children": [
           {
             "id": "c82367c5d92c939e",
@@ -27,11 +27,12 @@
       {
         "id": "20b9db909df5a4f1",
         "type": "split",
-        "dimension": 34.10714285714286,
+        "dimension": 44.55357142857143,
         "children": [
           {
             "id": "c64920a80fcdf016",
             "type": "tabs",
+            "dimension": 45.822454308093995,
             "children": [
               {
                 "id": "51f1f199f3c92caf",
@@ -48,6 +49,7 @@
           {
             "id": "92cf2bc447081516",
             "type": "tabs",
+            "dimension": 54.177545691906005,
             "children": [
               {
                 "id": "ebe5c5db7cdc94e6",
@@ -123,7 +125,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 202.5
+    "width": 200
   },
   "right": {
     "id": "719104d297771954",
@@ -231,8 +233,9 @@
   },
   "active": "51f1f199f3c92caf",
   "lastOpenFiles": [
-    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
+    "Resources/Unlocking Customer Needs By Job To Be Done.md",
     "02_Consulting_Process/02_Chien_luoc_SA.md",
+    "02_Consulting_Process/01_Kham_pha_nhu_cau_BA.md",
     "05_Clients/_NgaFashion/02_BA_Report.md",
     "05_Clients/_NgaFashion/03_SA_Report.md",
     "04_Templates/Tpl_SA_Report.md",
@@ -260,7 +263,6 @@
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/Resources/Unlocking Customer Needs By Job To Be Done.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/Resources",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/README.md",
-    "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/Diagram/Lark AI Agent in Lark workflow.md",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/Diagram",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients/_SEONGON",
     "Knowledge-Lark-Consult-main/Knowledge-Lark-Consult-main/05_Clients",
